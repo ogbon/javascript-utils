@@ -1,0 +1,13 @@
+{
+  "name": "javascript-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/utils.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/utils.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
