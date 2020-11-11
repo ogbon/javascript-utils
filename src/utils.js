@@ -1,15 +1,10 @@
-findHighest = (a,b,c) => {
-    let highest = 0;
-    if(a > b) {
-      highest = a;
-    }else {
-      highest = b;  
-     }
-    if(c > highest)
-      highest = c;
-    
+exports.findHighest = (...numbs) => {
+    let highest = -Infinity;
+    for(let i = 0; i < numbs.length; i++) {
+      if(numbs[i] > highest) {
+        highest = numbs[i];
+      };
+    };
     return highest;    
 };
-exports.findHighest = findHighest;
 
-'\n'
