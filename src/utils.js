@@ -1,9 +1,15 @@
-function findHighest(a,b,c) {
-    if(a > b && a > c)
-      return a;
-    if(b > a && b > c)
-      return b;
-    if(c > a && c > b)
-      return c;    
+findHighest = (a,b,c) => {
+    let highest = 0;
+    if(a > b) {
+      highest = a;
+    }else {
+      highest = b;  
+     }
+    if(c > highest)
+      highest = c;
+    
+    return highest;    
 };
+exports.findHighest = findHighest;
 
+'\n'
