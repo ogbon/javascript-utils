@@ -1,10 +1,10 @@
-exports.findHighest = (...numbs) => {
+exports.findHighest = (...numbers) => {
     let highest = -Infinity;
-    for(let i = 0; i < numbs.length; i++) {
-      if(numbs[i] > highest) {
-        highest = numbs[i];
-      };
-    };
+    numbers.forEach(number => {
+      if(number > highest) {
+        highest = number;
+      }
+    });
     return highest;    
 };
 
