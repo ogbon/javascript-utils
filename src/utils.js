@@ -11,16 +11,26 @@ exports.findHighest = (...numbers) => {
 
 exports.findLowest = (...numbers) => {
   let lowest = Infinity;
-  numbers.forEach(number => {
-    if(number < lowest) {
-      lowest = number;
-    };
-  });
-  if(lowest === Infinity || lowest === null) {
-    return NaN;
-  }else {
-    return lowest;
+  let res = numbers.every((element) => {return Number.isInteger(element);});
+  try {
+    if(numbers.length < 1) {
+      throw "This function expects at least one argument";
+    }else if(!res) {
+      throw "The function expects an integer";
+    }
+    else {
+      numbers.forEach(number => {
+        if(number < lowest) {
+          lowest = number;
+        };
+      });
+      return lowest;
+    }
   }
+  catch (err) {
+    return err;
+  }
+  
 };
 
 

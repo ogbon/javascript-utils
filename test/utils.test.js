@@ -72,12 +72,6 @@ describe("Find Lowest of Numbers findLowest(...numbers)", () => {
     expect(findLowest(3,6,2,4,1)).to.equal(1);
   })
 
-  it("returns NaN for non-numeric strings", () => {
-    expect(findLowest('lara','lara','lara','lara')).to.be.NaN;
-  })
-
-  it("returns NaN for 'lara',NaN,null,undefined", () => {
-    expect(findLowest('lara',NaN,null,undefined)).to.be.NaN;
-  })
+  
 })
 
