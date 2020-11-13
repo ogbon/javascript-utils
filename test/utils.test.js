@@ -37,6 +37,7 @@ describe("Find Highest of Numbers findHighest(...numbs)", () => {
   })
 })
 
+
 describe("Find Lowest of Numbers findLowest(...numbers)", () => {
   
   it("returns the lowest of 4, 5, 2", () => {
@@ -79,3 +80,4 @@ describe("Find Lowest of Numbers findLowest(...numbers)", () => {
     expect(findLowest('lara',NaN,null,undefined)).to.be.NaN;
   })
 })
+
