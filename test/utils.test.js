@@ -40,7 +40,7 @@ describe("Find Highest of Numbers findHighest(...numbs)", () => {
 describe("Find Average of Numbers findAverage(...numbers)", () => {
   
   it("returns the average of 4, 5, 2", () => {
-      expect(findAverage(4,5,2)).to.equal(3.6666666666666665);
+      expect(findAverage(4,5,2)).to.equal(3.67);
   })
 
   it("returns the average of 0, -1, -2", () => {
@@ -48,7 +48,7 @@ describe("Find Average of Numbers findAverage(...numbers)", () => {
 })
 
   it("returns the average of 3, 1, 1000", () => {
-    expect(findAverage(3,1,1000)).to.equal(334.6666666666667);
+    expect(findAverage(3,1,1000)).to.equal(334.67);
   })
 
   it("returns the average of 2, 2, 2", () => {
@@ -68,7 +68,7 @@ describe("Find Average of Numbers findAverage(...numbers)", () => {
   })
 
   it("returns the average of 3, 6, 2, 4, 1", () => {
-    expect(findAverage(3,6,2,4,1)).to.equal(3.2);
+    expect(findAverage(3,6,2,4,1)).to.equal(3.20);
   })
 })
 
