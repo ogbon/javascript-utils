@@ -72,6 +72,13 @@ describe("Find Lowest of Numbers findLowest(...numbers)", () => {
     expect(findLowest(3,6,2,4,1)).to.equal(1);
   })
 
-  
+  it("returns 'This function expects at least one argument'", () => {
+    expect(() => findLowest()).to.throw();
+  })
+
+  it("returns 'This function expects an integer'", () => {
+    expect(() => findLowest("lala",NaN,null,undefined)).to.throw();
+  })
+
 })
 

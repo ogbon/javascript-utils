@@ -10,27 +10,20 @@ exports.findHighest = (...numbers) => {
 
 
 exports.findLowest = (...numbers) => {
-  let lowest = Infinity;
-  let res = numbers.every((element) => {return Number.isInteger(element);});
-  try {
+  
     if(numbers.length < 1) {
-      throw "This function expects at least one argument";
-    }else if(!res) {
-      throw "The function expects an integer";
+      throw new Error("This function expects at least one argument");
     }
-    else {
-      numbers.forEach(number => {
+    if(!numbers.every((element) => Number.isInteger(element))) {
+      throw new Error("The function expects an integer");
+    }
+    let lowest = numbers[0];
+    numbers.forEach(number => {
         if(number < lowest) {
           lowest = number;
         };
       });
-      return lowest;
-    }
-  }
-  catch (err) {
-    return err;
-  }
-  
+    return lowest;
 };
 
 
