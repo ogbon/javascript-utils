@@ -70,6 +70,15 @@ describe("Find Average of Numbers findAverage(...numbers)", () => {
   it("returns the average of 3, 6, 2, 4, 1", () => {
     expect(findAverage(3,6,2,4,1)).to.equal(3.20);
   })
+
+  it("returns 'This function expects at least one argument'", () => {
+    expect(() => findAverage()).to.throw();
+  })
+
+  it("returns 'This function expects an integer'", () => {
+    expect(() => findAverage("lala",NaN,null,undefined)).to.throw();
+  })
+  
 })
 
 

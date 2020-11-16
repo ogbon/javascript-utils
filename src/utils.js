@@ -19,11 +19,7 @@ exports.findAverage = (...numbers) => {
     }
     
     const average = numbers.reduce((a,b) => a + b, 0) / numbers.length;
-    if(Number.isInteger(average)) {
-        return average;
-    }else {
-        return parseFloat(average.toFixed(2));
-    }
     
+    return Number.isInteger(average) ? average : parseFloat(average.toFixed(2));
 }
 
