@@ -10,29 +10,20 @@ exports.findHighest = (...numbers) => {
 
 
 exports.findAverage = (...numbers) => {
-  let ave = 0;
-  let res = numbers.every((element) => {return Number.isInteger(element);});
   
-  try {
     if(numbers.length < 1) {
-      throw "This function expects at least one argument";
+      throw new Error("This function expects at least one argument");
     }
-    else if(!res) {
-      throw "The function expects an integer";
-    }
-    else {
-      ave = numbers.reduce((a,b) => a + b, 0) / numbers.length;
-      if(Number.isInteger(ave)) {
-        return ave;
-      }else {
-        ave = ave.toFixed(2);
-        return parseFloat(ave);
-      }
+    if(!numbers.every((element) => Number.isInteger(element))) {
+      throw new Errow("The function expects an integer");
     }
     
-  }
-  catch (err) {
-    return err;
-  }
+    const average = numbers.reduce((a,b) => a + b, 0) / numbers.length;
+    if(Number.isInteger(average)) {
+        return average;
+    }else {
+        return parseFloat(average.toFixed(2));
+    }
+    
 }
 
