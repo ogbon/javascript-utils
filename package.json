@@ -5,13 +5,15 @@
   "main": "src/utils.js",
   "scripts": {
     "test": "mocha",
-    "start": "node src/utils.js"
+    "start": "node src/utils.js",
+    "coverage": "nyc npm run test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^8.2.1"
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0"
   }
 }
